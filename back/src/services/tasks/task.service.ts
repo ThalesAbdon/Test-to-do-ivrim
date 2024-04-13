@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-explicit-any */
 import { taskModel } from "../../models/tasks/task.model";
 import { ITaskInterface } from "../../shared/Interfaces/task.interface";
 

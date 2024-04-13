@@ -14,11 +14,11 @@ export const CustomModalStyle = {
     top: '50%',
     left: '50%',
     transform: 'translate(-50%, -50%)',
-    maxWidth: '90%', // Usando 90% da largura da tela
-    maxHeight: '90%', // Usando 90% da altura da tela
-    width: 'auto', // Largura automática para se ajustar ao conteúdo
-    height: 'auto', // Altura automática para se ajustar ao conteúdo
-    overflow: 'auto', // Adicionando overflow automático
+    maxWidth: '90%', 
+    maxHeight: '90%', 
+    width: 'auto', 
+    height: 'auto', 
+    overflow: 'auto', 
     padding: '20px',
     border: 'none',
     borderRadius: '8px',
@@ -26,6 +26,19 @@ export const CustomModalStyle = {
 
   }
 };
+
+export const CustomCloseButton = { 
+  color: '#9a989e',
+  position: 'absolute', 
+  top: '10px', 
+  right: '10px', 
+  cursor: 'pointer', 
+  padding: '5px', 
+  background: 'none', 
+  border: 'none', 
+  fontSize: '24px' 
+}
+
 
 // Estilizando o ModalContainer
 export const ModalContainer = styled.div`

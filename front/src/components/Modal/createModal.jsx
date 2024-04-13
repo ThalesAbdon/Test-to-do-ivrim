@@ -1,12 +1,10 @@
-/* eslint-disable no-undef */
-/* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-// CustomModal.js
+/* eslint-disable react/prop-types */
 import React, { useState } from 'react';
 import Modal from 'react-modal';
 import { create } from '../../services/api';
 import { api } from '../../services/axios';
-import { ModalContainer,CustomModalStyle } from './styles'; // Importando o ModalContainer dos estilos
+import { ModalContainer, CustomModalStyle, CustomCloseButton} from './styles';
 
 export const CustomModal = ({ isOpen, onRequestClose }) => {
   const [title, setTitle] = useState('');
@@ -27,6 +25,7 @@ export const CustomModal = ({ isOpen, onRequestClose }) => {
       style={CustomModalStyle}
     >
       <ModalContainer>
+        <button onClick={onRequestClose} style={CustomCloseButton}>X</button>
         <h2>Adicionar Tarefa</h2>
         <form onSubmit={handleSubmit}>
           <div>

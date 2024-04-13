@@ -1,4 +1,3 @@
-import { taskModel } from "../../../models/tasks/task.model";
 import { taskStatus } from "../../../shared/Enums/task-status.enum";
 import { ITaskInterface } from "../../../shared/Interfaces/task.interface";
 import { TaskServices } from "../task.service";

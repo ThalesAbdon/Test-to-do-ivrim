@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/ban-types */
 import { TaskServices } from "../../services/tasks/task.service";
 import { Request, Response } from "express";
 import { ITaskInterface } from "../../shared/Interfaces/task.interface";
