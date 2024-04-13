@@ -1,5 +1,33 @@
 {
   "dependencies": {
-    "typescript": "^5.4.4"
+    "@types/express": "^4.17.21",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "mongoose": "^8.3.1",
+    "nodemon": "^3.1.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "name": "back",
+  "description": "Crie o backend, com a estrutura de sua preferência, sendo obrigatório apenas o uso de Node.js + Typescript, e banco de dados (MySQL, PostgreSQL ou MongoDB).",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "build": "yarn tsc --build",
+    "start:dev": "npx ts-node -r dotenv/config src/server.ts",
+    "start": "node -r dotenv/config dist/server.js",
+    "test": "jest"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/cors": "^2.8.17",
+    "@types/dotenv": "^8.2.0",
+    "@types/jest": "^29.5.12",
+    "@types/mongoose": "^5.11.97",
+    "jest": "^29.7.0",
+    "ts-jest": "^29.1.2"
   }
 }
