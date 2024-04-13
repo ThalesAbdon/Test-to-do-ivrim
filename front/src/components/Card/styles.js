@@ -50,3 +50,17 @@ export const Label = styled.span`
   display: inline-block;
   background: ${props => props.color};
 `;
+
+export const TrashIcon = styled.div`
+position: absolute;
+color: red;
+left: 257px;
+top: 9px;
+cursor: pointer;
+font-size: 20px;
+  &:hover {
+    color: darkred;
+    font-size: 24px;
+  }
+`;
+
