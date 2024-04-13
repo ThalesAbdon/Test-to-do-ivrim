@@ -27,4 +27,108 @@ Neste teste, você receberá um layout de front-end pré-desenvolvido em React.j
 - Utilização de boas práticas de programação.
 
 # Prazo:
-Você terá até o dia 12/04/2024 - 23:59 para concluir o teste.
+Você terá até o dia 13/04/2024 - 23:59 para concluir o teste.
+
+# RESOLUÇÃO
+
+## Instalação e Execução
+ Para instalar o projeto é simples:
+ 
+### 1. Clonar o Repositório
+
+Clone o repositório do GitHub para sua máquina local:
+
+```bash
+git clone https://github.com/ThalesAbdon/Test-to-do-ivrim
+```
+
+### 2. Instalar Dependências Back-end
+Acesse a pasta do back end
+```
+cd test-to-do-ivrim/back
+```
+
+Fiz utilizando yarn, portanto rode um:
+```
+yarn install
+```
+
+Rode o docker compose para subir o banco de dados ( MongoDB )
+```
+docker compose up -d
+```
+Rodar o programa:
+
+```
+yarn start:dev
+```
+
+Rode o comando abaixo para Compilar:
+```
+yarn build
+```
+
+Rodar projeto compilado:
+```
+yarn start
+```
+
+Rodar testes unitário compilado:
+```
+yarn test
+```
+
+### 3. Configurar Variáveis de Ambiente no Back
+Verifique as variavéis de ambiente no arquivo
+```
+.env
+```
+
+### 4. Instalar Dependências Front
+
+Acesse a pasta do front
+```
+cd test-to-do-ivrim/front
+```
+
+Fiz utilizando yarn, portanto rode um:
+```
+yarn install
+```
+
+Para rodar o programa, basta utilizar:
+```
+yarn dev
+```
+
+### 5. Configurar Variáveis de Ambiente no Front
+Verifique as variavéis de ambiente no arquivos.
+OBS: eu nunca tinha trabalhado com import.meta, por isso subi no código as envs. Isso NÃO é uma boa prática.
+O ideal é sempre colocar .env no gitignore. Mas como é a primeira vez que trabalhei com import.meta quis deixar no repo para eu ter um exemplo futuro.
+```
+.env
+env.d.ts
+```
+### 6. API Client
+Utilizei o Postman.
+
+#### GET
+OBS: Lembrando que para fazer o get o status só aceita 3 values ( do jeito que está escrito abaixo):
+* A Fazer
+* Em Progresso
+* Concluído
+
+![image](https://github.com/ThalesAbdon/Test-to-do-ivrim/assets/87333834/e86eae20-f962-44e2-adbd-bc8322a31012)
+
+#### POST
+![image](https://github.com/ThalesAbdon/Test-to-do-ivrim/assets/87333834/095cb698-9291-4cc6-868d-39623919cb1a)
+
+#### PUT
+![image](https://github.com/ThalesAbdon/Test-to-do-ivrim/assets/87333834/56198295-9855-467e-85c8-0cbc3e4ad6fb)
+
+#### DELETE
+![image](https://github.com/ThalesAbdon/Test-to-do-ivrim/assets/87333834/c639cbdf-747c-4cdf-bdae-d2482b50d808)
+
+Dentro da pasta do backend há uma collection do postman ( que foi a utilizada nos meus testes ), então basta importar.
+
+
