@@ -1,3 +1,5 @@
+/* eslint-disable react/prop-types */
+/* eslint-disable no-unused-vars */
 import React, { useRef, useContext } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
@@ -55,10 +57,10 @@ export default function Card({ data, index, listIndex }) {
   return (
     <Container ref={ref} isDragging={isDragging}>
       <header>
-        {data.labels.map(label => <Label key={label} color={label} />)}
+      <h4>{data.title}</h4>
+      {<Label key={data._id}/>}
       </header>
-      <p>{data.content}</p>
-      { data.user && <img src={data.user} alt=""/> }
+      <p>{data.description}</p>
     </Container>
   );
 }

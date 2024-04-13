@@ -1,3 +1,5 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/prop-types */
 import React, { useRef, useContext } from 'react';
 import { useDrag, useDrop } from 'react-dnd';
 
@@ -10,7 +12,6 @@ export default function Fake({ index, listIndex }) {
   const [, dropRef] = useDrop({
     accept: 'CARD',
     hover(item, monitor) {
-      console.log(item, monitor, listIndex);
 
       const draggedListIndex = item.listIndex;
       const targetListIndex = listIndex;

@@ -1,14 +1,12 @@
+/* eslint-disable no-undef */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react';
 import produce from 'immer';
-
-import { list } from '../../services/api.ts';
-
 import BoardContext from './context';
-
 import List from '../List';
-
 import { Container } from './styles';
+import { loadLists } from '../../services/list';
+import {update} from '../../services/api'
 import { api } from '../../services/axios';
 
 export default function Board() {
@@ -17,8 +15,7 @@ export default function Board() {
   useEffect(() => {
     async function fetchData() {
       try {
-        const data = await list(api,'A Fazer');
-        console.log(data)
+        const data = await loadLists();
         setLists(data);
       } catch (error) {
         console.error('Error loading lists:', error);
@@ -26,14 +23,16 @@ export default function Board() {
     }
 
     fetchData();
-  }, []); // Empty dependency array to run only once on component mount
+  }, []);
 
   function move(fromList, toList, from, to) {
     setLists(produce(lists, draft => {
       const dragged = draft[fromList].cards[from];
-      if (dragged.id) {
+      if (dragged._id) {
         draft[fromList].cards.splice(from, 1);
         draft[toList].cards.splice(to, 0, dragged);
+        const status = toList == 0 ? 'A Fazer' : toList == 1 ? 'Em Progresso' : 'Concluído'
+        update(api,dragged._id,{status: status}).then(res => res)
       }
     }));
   }

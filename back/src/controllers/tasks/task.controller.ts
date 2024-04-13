@@ -19,6 +19,7 @@ export class TaskControllers implements IMethods {
   async read(req: Request<{}, {}, {}, { status: string }>, res: Response) {
     try {
       const data = await this._taskService.read(req.query.status);
+
       return res.status(200).json(data);
     } catch (error) {
       return res.status(400).json({ message: "Error ao listar!" });

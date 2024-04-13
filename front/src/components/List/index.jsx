@@ -28,7 +28,7 @@ export default function List({ data, index: listIndex }) {
       }}>
         {data.cards.map((card, index) => (
           <Card 
-            key={card.id} 
+            key={card._id} 
             listIndex={listIndex}
             index={index} 
             data={card}
